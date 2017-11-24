@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>HW3</title>
-    
+    <script type="text/javascript">
+
+        function rolldice()
+        {
+            var die1 = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+            var die2 = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+            var sum = die1 + die2;
+            return sum;
+        }
+
+        var tally = [];
+        for(var x=0; x<13; x++)
+        {
+            tally[x] = 0;
+        }
+
+        for(var i=0; i<36000; i++)
+        {
+            var sum = rolldice();
+            tally[sum]++;
+        }
+
+        /*
+        for(x=0; x<13; x++)
+        {
+            document.write(tally[x] + "," + x);
+            document.write("<br></br>");
+        }
+        */
+
+        document.write("<table border='1'>");
+        document.write("<th> Sum </th>");
+        document.write("<th> Tally </th>");
+
+        for(var x=2; x<13; x++)
+        {
+            document.write("<tr><td>" + x + "</td><td>" + tally[x] + "</td></tr>");
+        }
+
+    </script>
 </head>
 <body>
 
