@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function print()
+        {
+            if (time <= 3)
+            {
+                document.write(String(time));
+                time++;
+            }
+            else
+            {
+                clearInterval(interval);
+            }
+        }
+
+        var time = 1;
+
+        var interval = setInterval(print, 5000);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
